@@ -1,0 +1,68 @@
+1.core-site.xml
+
+<configuration>
+	<property>
+		<name>fs.defaulterFS</name>
+		<value>hdfs://localhost:900</value>
+	</property>
+</configuration>
+
+
+2.mapred-site.xml
+
+<configuration>
+	
+	<property>
+		<name>mapreduce.framework.name</name>
+		<value> yarn</value>
+	</property>	
+	
+</configuration>
+
+
+3.yarn-site.xml
+
+
+<configuration>
+
+	<property>
+		<name>yarn.nodemanager.aux-services</name>
+		<value>mapreduce_shuffle</value>
+	</property>	
+	
+	<property>
+		<name>yarn.nodemanager.aux-services.mapreduce.shuffle</name>
+		<value>org.apache hadoop.maped.shufflehandler</value>
+	</property>	
+
+</configuration>
+
+
+4.hdfs-site.xml
+
+
+<configuration>
+	
+	<property>
+		<name>dfs.replication</name>
+		<value>1</value>
+	</property>	
+	
+	<property>
+		<name>dfs.namenode.name.dir</name>
+		<value>c:\hadoop-3.3.4\data\namenode</value>
+	</property>	
+	
+	<property>
+		<name>dfs.datanode.name.dir</name>
+		<value>c:\hadoop-3.3.4\data\datanode</value>
+	</property>	
+
+</configuration>
+
+5.Make one folder name it as "data" in this make two folder as "namenode" and "datanode"
+
+
+6.hadoop-site.xml
+
+set JAVA_HOME=C:\java\jdk1.8.0_202------------------------------------------>jkd path to insert 
